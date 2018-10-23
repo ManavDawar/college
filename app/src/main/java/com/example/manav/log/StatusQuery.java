@@ -16,6 +16,8 @@ public class StatusQuery extends AppCompatActivity {
     private DatabaseReference mUserDatabase;
     String searchFieldpassport ="",searchfieldRegNo="",searchFieldfileNo="";
     TextView mResultTextView;
+    TextView notice_date;
+    TextView mResultTextView1;
 
 
     @Override
@@ -28,8 +30,10 @@ public class StatusQuery extends AppCompatActivity {
         searchfieldRegNo=bundle.getString("onlinereg");
         searchFieldfileNo=bundle.getString("FILENUM");
         mResultTextView=findViewById(R.id.myresultTextView);
+        mResultTextView1=findViewById(R.id.notice_date);
 
-        mUserDatabase= FirebaseDatabase.getInstance().getReference();
+
+        mUserDatabase= FirebaseDatabase.getInstance().getReference().child("enquiry");
         mUserDatabase.keepSynced(true);
 
         mUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -42,6 +46,7 @@ public class StatusQuery extends AppCompatActivity {
                             &&data.child("onlineregnum").getValue().toString().equals(searchfieldRegNo)
                             ){
                         mResultTextView.setText(data.child("moreinfo").getValue().toString());
+                        mResultTextView1.setText(data.child("passportnum").getValue().toString());
                         break;
                     }else{
                                             mResultTextView.setText(getText(R.string.stylish_text4));

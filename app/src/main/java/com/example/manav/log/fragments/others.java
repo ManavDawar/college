@@ -10,7 +10,7 @@ import android.widget.Button;
 
 import com.example.manav.log.R;
 import com.example.manav.log.subActivities.Aboutus;
-import com.example.manav.log.subActivities.Faq;
+import com.example.manav.log.subActivities.Faq1;
 import com.example.manav.log.subActivities.Privacy;
 import com.example.manav.log.subActivities.TermsOfUse;
 
@@ -63,7 +63,7 @@ Button aboutUs,privacy,faq,termsOfUse,signOut;
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(getContext(),Faq.class);
+                intent.setClass(getContext(),Faq1.class);
                 startActivity(intent);
             }
         });

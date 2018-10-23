@@ -27,13 +27,14 @@
         <activity android:name=".subActivities.complaints" />
         <activity android:name=".subActivities.OciEnquiry" />
         <activity android:name=".subActivities.Aboutus" />
-        <activity android:name=".subActivities.Faq" />
+        <activity android:name=".subActivities.Faq1" />
         <activity android:name=".subActivities.Oci" />
         <activity android:name=".subActivities.ConnectWithUs" />
         <activity android:name=".subActivities.Privacy" />
         <activity android:name=".subActivities.TermsOfUse" />
         <activity android:name=".MainActivity1" />
-        <activity android:name=".subActivities.phone"></activity>
+        <activity android:name=".FormActivity" />
+        <activity android:name=".subActivities.phone" />
     </application>
 
 </manifest>

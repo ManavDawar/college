@@ -8,11 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.manav.log.FormActivity;
 import com.example.manav.log.R;
 import com.example.manav.log.StatusEnquiry;
 import com.example.manav.log.subActivities.Aboutus;
 import com.example.manav.log.subActivities.ConnectWithUs;
-import com.example.manav.log.subActivities.Faq;
+import com.example.manav.log.subActivities.Faq1;
 import com.example.manav.log.subActivities.Oci;
 import com.example.manav.log.subActivities.OciEnquiry;
 import com.example.manav.log.subActivities.OciRegistration;
@@ -80,7 +81,7 @@ public class home extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setClass(getContext(), OciRegistration.class);
+                intent.setClass(getContext(), FormActivity.class);
                 startActivity(intent);
 
             }
@@ -107,7 +108,7 @@ public class home extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setClass(getContext(),Faq.class);
+                intent.setClass(getContext(),Faq1.class);
                 startActivity(intent);
 
             }
